@@ -1,0 +1,20 @@
+<!-- Main content -->
+<div class="main-content" id="panel">
+
+  <!-- Header -->
+  <app-header></app-header>
+
+  <!-- Page content -->
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col-xl-8">
+        <app-cities-weather (emitter)="send($event)"></app-cities-weather>
+      </div>
+      <div class="col-xl-4">
+        <app-forecast-weather [keyword]="keyword"></app-forecast-weather>
+      </div>
+    </div>
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </div>
+</div>

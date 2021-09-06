@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-header border-0">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="mb-0">Cities Current Weather</h3>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <!-- Projects table -->
+    <table class="table align-items-center table-flush">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">City name</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Sunrise</th>
+          <th scope="col">Sunset</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="city-info" [ngStyle]="{'background-color': city.id === keyword ? 'bisque' : 'inherit' }" (click)="emit(city.id)" *ngFor="let city of resp.list">
+          <td>{{city.name}}</td>
+          <td >{{city.main.temp}}</td>
+          <td >{{city.sys.sunrise | date:'shortTime'}}</td>
+          <td >{{city.sys.sunset | date:'shortTime'}}</td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+</div>

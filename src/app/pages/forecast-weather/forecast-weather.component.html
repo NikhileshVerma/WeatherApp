@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header border-0">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="mb-0">{{cityName}} Weather Forecast</h3>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <!-- Projects table -->
+    <table class="table align-items-center table-flush">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Sea Level</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cityForecast of data">
+          <td class="forecast-info forecast-0">{{cityForecast.dt_txt | date:'medium'}}</td>
+          <td class="forecast-info forecast-1">{{cityForecast.main.temp_min}}</td>
+          <td class="forecast-info forecast-1">{{cityForecast.main.sea_level}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
