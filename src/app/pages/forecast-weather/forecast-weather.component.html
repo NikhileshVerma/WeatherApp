@@ -20,7 +20,7 @@
       <tbody>
         <tr *ngFor="let cityForecast of data">
           <td class="forecast-info forecast-0">{{cityForecast.dt_txt | date:'medium'}}</td>
-          <td class="forecast-info forecast-1">{{cityForecast.main.temp_min}}</td>
+          <td class="forecast-info forecast-1">{{cityForecast.main.temp_min}} °C</td>
           <td class="forecast-info forecast-1">{{cityForecast.main.sea_level}}</td>
         </tr>
       </tbody>
